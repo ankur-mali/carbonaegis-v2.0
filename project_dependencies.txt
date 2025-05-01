@@ -1,0 +1,33 @@
+# Carbon Aegis Project Dependencies
+
+## Core CLI Version (No External Dependencies)
+- Python 3.6+
+
+## Extended Streamlit Version Dependencies
+- streamlit>=1.28.0
+- pandas>=2.0.0
+- numpy>=1.22.0
+- plotly>=5.14.0
+- openpyxl>=3.1.0 (for Excel file handling)
+- typing-extensions>=4.7.0
+- openai>=1.0.0 (for AI assistant features)
+- sqlalchemy>=2.0.0 (for database operations)
+- reportlab>=4.0.0 (for PDF report generation)
+- trafilatura>=1.6.0 (for web scraping capabilities)
+
+## Installation Instructions
+
+For CLI version only:
+```bash
+# No additional packages needed
+python simple_cli.py
+```
+
+For full Streamlit version:
+```bash
+# Install all required packages
+pip install -r requirements.txt
+
+# Run the Streamlit application
+streamlit run app.py
+```
