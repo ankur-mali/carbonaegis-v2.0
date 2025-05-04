@@ -8,3 +8,4 @@ openai>=1.0.0
 sqlalchemy>=2.0.0
 reportlab>=4.0.0
 trafilatura>=1.6.0
+streamlit-extras

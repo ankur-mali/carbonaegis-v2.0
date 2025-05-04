@@ -349,7 +349,7 @@ elif st.session_state.onboarding_step == 3:
     # Complete button
     if st.button("Go to Home Dashboard", key="complete_btn", use_container_width=True):
         st.session_state.onboarding_complete = True
-        st.switch_page("app.py")
+        st.switch_page("home.py")
 
 # Handle "back" navigation
 if st.session_state.onboarding_step > 1:

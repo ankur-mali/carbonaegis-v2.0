@@ -142,7 +142,7 @@ def analyze_column_with_ai(column_name, sample_values=None):
         
         # Clean and validate response
         response = response.strip().lower()
-        valid_categories = ['date', 'activity', 'amount', 'unit', 'emission_factor', 'scope']
+        valid_categories = ['date', 'activity', 'amount', 'unit', 'emission_factor', 'scope','text']
         
         # Extract the category if found in response
         for category in valid_categories:
@@ -177,7 +177,8 @@ def detect_column_types(df, use_ai=False):
         'amount': ['amount', 'quantity', 'volume', 'consumption', 'usage', 'kwh', 'kg', 'liters', 'km'],
         'unit': ['unit', 'uom', 'measure'],
         'emission_factor': ['factor', 'ef', 'emission', 'co2'],
-        'scope': ['scope']
+        'scope': ['scope'],
+        'text': ['text','name','departments','department','company name'],
     }
     
     # Check column names for matches

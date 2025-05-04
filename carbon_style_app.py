@@ -125,9 +125,10 @@ def calculate_emissions(df, mappings):
         scope = 'Scope 3'
         if scp and pd.notna(row.get(scp)):
             s = str(row.get(scp)).lower()
-            if '1' in s: scope='Scope 1'
+            if '1' in s: scope='Scope 1 Emissions'
             elif '2' in s: scope='Scope 2'
             elif '3' in s: scope='Scope 3'
+
         results['total_emissions'] += emis
         results['by_scope'][scope] += emis
         cat = str(actv)[:50]
@@ -152,7 +153,7 @@ def main():
     add_custom_css()
     init_session_state()
     with st.sidebar:
-        logo = os.path.join('assets','logo.png')
+        logo = os.path.join('assets', 'logo.png')
         if os.path.exists(logo): st.image(logo, width=180)
         st.markdown("---")
         st.subheader("Navigation")
